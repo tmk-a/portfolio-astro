@@ -1,0 +1,49 @@
+---
+import "./hamburger-menu.scss";
+
+const navList = [
+  {name:"HOME", navTo:"#home"},
+  {name:"ABOUT", navTo:"#about"},
+  {name:"SKILLS", navTo:"#skills"},
+  {name:"HISTORY", navTo:"#history"},
+  {name:"PROJECT", navTo:"#project"},
+  {name:"CONTACT", navTo:"#contact"}
+];
+---
+
+<div class="hamburger-menu">
+    <nav>
+      <ul class="hamburger-menu__section">
+        {
+          navList.map(item => (
+            <li><a class="menu__item" href={item.navTo}>{item.name}</a></li>
+          ))
+        }
+      </ul>
+      <address class="hamburger-menu__contact">
+        <div class="hamburger-menu__icons" >
+          <a href="mailto:tamaki.akita.jp@example.com"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a href="https://github.com/tmk-a" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/tamaki-akita/" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <!-- TODO: update link -->
+          <a href="./docs/Tamaki Akita - Resume.pdf" target="_blank"
+            >Resume<i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+      </address>
+    </nav>
+</div>
+<button class="button__hamburger">
+  <div class="hamburger-menu__menuIcon">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="hamburger-menu__closeIcon">
+    <i class="fa-solid fa-xmark"></i>
+  </div>
+</button>

@@ -1,0 +1,38 @@
+---
+import './history.scss';
+import Accordion from '../../core/components/accordion/accordion.astro';
+import SectionContainer from '../../core/components/section/section-container.astro';
+
+const accordionList = [
+    {
+        title:"WEB DEVELOPMENT STUDENT",
+        text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed alias corporis asperiores vero, porro odit obcaecati vitae odio, similique mollitia necessitatibus, vel voluptate dolor. Ab quibusdam modi quod unde odit"
+    },
+    {
+        title:"SYSTEM ENGINEER",
+        text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed alias corporis asperiores vero, porro odit obcaecati vitae odio, similique mollitia necessitatibus, vel voluptate dolor. Ab quibusdam modi quod unde odit"
+    },
+    {
+        title:"CREATIVE WRITING/JAPANESE LITERATURE",
+        text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed alias corporis asperiores vero, porro odit obcaecati vitae odio, similique mollitia necessitatibus, vel voluptate dolor. Ab quibusdam modi quod unde odit"
+    },
+]
+---
+<SectionContainer className="history">
+    <div class='history__container'>
+        <div class="history__upper-container">
+            <h1 class="history__title">history</h1>
+        </div>
+        <div class="history__accordions">
+            {
+                accordionList.map(item => (
+                    <Accordion 
+                        title={item.title}
+                        text={item.text}
+                    />
+                ))
+            }
+        </div>
+        </div>
+    </div>
+</SectionContainer>

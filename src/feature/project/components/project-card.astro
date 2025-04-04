@@ -1,0 +1,21 @@
+---
+import "../components/project-card.scss";
+const {name,photo,date,link}=Astro.props;
+---
+
+<div class="project-card">
+  <div class="project-card__name">
+    <h4>{name}</h4>
+    <a href={link} href="portfolio"
+      ><i class="fa-solid fa-arrow-up-right-from-square"></i
+    ></a>
+  </div>
+  <div class="project-card__item">
+    <div class="project__item-text">
+      <p>{date}</p>
+    </div>
+    <div class="project-card__image">
+      <img src={photo} alt="portfolio" />
+    </div>
+  </div>
+</div>

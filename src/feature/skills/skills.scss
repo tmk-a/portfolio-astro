@@ -1,0 +1,53 @@
+@use "sass:map";
+// @use "../abstracts/font";
+// @use "../abstracts/screen-size";
+// @use "../abstracts/mixin";
+$base-class: skills;
+
+// .skills
+
+.#{$base-class} {
+  padding: 4rem 0;
+
+  &__title {
+    // font-size: map.get(font.$font, font-size, medium);
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  &__others-item {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+// @include mixin.responsive(md) {
+//   .#{$base-class} {
+//     &__list {
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       gap: 1rem;
+//       align-items: stretch;
+//     }
+
+//     &__big-category {
+//       flex: 1;
+//     }
+
+//     &__middle-categories {
+//       height: 100%;
+//     }
+
+//     &__others {
+//       max-width: 250px;
+//     }
+//   }
+// }

@@ -1,0 +1,15 @@
+---
+const { title, text } = Astro.props;
+import './accordion.scss';
+---
+<div class="accordion__container">
+  <button class="accordion__accordion">
+    <div class="accordion__title">{title}</div>
+    <i class="fa-solid fa-plus accordion__accordion-plus accordion__icon"></i>
+    <i class="fa-solid fa-minus accordion__accordion-minus accordion__icon"></i>
+    <i class="fa-solid fa-angle-down accordion__accordion-angle accordion__icon"></i>
+  </button>
+  <div class="accordion__panel">
+    <p>{text}</p>
+  </div>
+</div>

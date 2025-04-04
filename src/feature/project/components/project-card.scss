@@ -1,0 +1,46 @@
+@use "sass:map";
+// @use "../abstracts/font";
+// @use "../abstracts/screen-size";
+// @use "../abstracts/mixin";
+@use "../../../core/style/responsive.scss" as *;
+@use "../../../core/style/colors.scss" as *;
+
+$base-class: project-card;
+
+// .project
+
+.#{$base-class} {
+  padding: 4rem 0;
+  border: 2px solid map.get($colors, border, accent-green);
+  border-radius: 1rem;
+
+  &__name {
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.2rem 1rem;
+    height: 7rem;
+
+    @include responsive(sm) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__item-text {
+    width: 40%;
+  }
+
+  &__image {
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

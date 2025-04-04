@@ -1,0 +1,91 @@
+@use "../../../core/style/colors.scss" as *;
+@use "sass:map";
+@use "../../../core/style/responsive.scss" as *;
+
+.accordion {
+  &__container {
+    padding: 0.75rem 0;
+  }
+
+  &__accordion {
+    background-color: map.get($colors, background, darker);
+    color: map.get($colors, background, lighter);
+
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+
+    text-align: left;
+    font-size: 1rem;
+    font-family: inherit;
+
+    border: 1px solid map.get($colors, border, variant);
+    outline: none;
+
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+  }
+
+  &__title {
+    padding-right: 2rem;
+  }
+
+  &__panel {
+    padding: 0 18px;
+    background-color: map.get($colors, background, darker);
+    color: map.get($colors, background, lighter);
+    border: 1px solid map.get($colors, border, variant);
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    & p {
+      padding: 1rem;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__accordion-angle {
+    display: none;
+  }
+
+  &__accordion-plus {
+    display: block;
+  }
+
+  &__accordion-minus {
+    display: none;
+  }
+
+  @include responsive(sm) {
+    &__accordion-angle {
+      display: block;
+    }
+
+    &__accordion-plus {
+      display: none;
+    }
+  }
+}
+
+.rotate {
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}

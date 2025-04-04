@@ -1,0 +1,49 @@
+@use "sass:map";
+@use "../../style/responsive.scss" as *;
+@use "../../style/colors.scss" as *;
+
+:root {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: map.get($colors, letter, main);
+
+  @include responsive-property(font-size, 0.5rem, 0.5rem, 1rem, 1.5rem, 2rem);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// TODO: should gather as a component.
+.container {
+  display: flex;
+  flex-direction: column;
+}

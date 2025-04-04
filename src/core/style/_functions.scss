@@ -1,0 +1,6 @@
+@use "sass:map";
+@use "./../abstracts/screen-size";
+
+@function get-width($size) {
+  @return map.get(screen-size.$screen-size, $size);
+}

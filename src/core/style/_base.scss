@@ -1,0 +1,71 @@
+@use "sass:map";
+@use "./font";
+@use "../abstracts/mixin";
+
+:root {
+  font-family: map.get(font.$font, font-family, primary),
+    map.get(font.$font, font-family, generic);
+  font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+body {
+  scroll-padding-top: 100px;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+@include mixin.responsive(md) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@include mixin.responsive(lg) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+@include mixin.responsive(xl) {
+  :root {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,10 @@
+---
+import "./section-container.scss";
+
+const {title,id,className} = Astro.props;
+---
+
+<section id={id} class={`section ${className}`}>
+    <h3 class="section__title">{title}</h3>
+    <slot />
+</section>

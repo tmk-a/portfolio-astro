@@ -1,0 +1,16 @@
+---
+import "./project.scss";
+import SectionContainer from "../../core/components/section/section-container.astro";
+import ProjectImg from "../../assets/portfolio.png";
+import ProjectCard from "./components/project-card.astro";
+---
+
+<SectionContainer id="project" title="Project"
+className="project">
+    <ProjectCard 
+        name="Portfolio"
+        photo={ProjectImg.src}
+        date="2025/2"
+        link="#home"
+    />
+</SectionContainer>
