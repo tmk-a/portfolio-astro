@@ -1,28 +1,42 @@
+@use "sass:map";
+@use "../../../core/style/colors.scss" as *;
+@use "../../../core/style/responsive.scss" as *;
+
 $base-class: skill-card;
 
 // .skill-card
 
 .#{$base-class} {
-  max-width: 100%;
+  max-width: 17rem;
 
   &__middle-categories {
-    background-color: rgb(240, 240, 240);
+    background-color: map.get($colors, background, darker);
+    border-radius: 0.2rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-    h5 {
-      margin-bottom: 1rem;
+  &__sub-category {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    &::before {
+      content: "― ";
+    }
+
+    &::after {
+      content: " ―";
     }
   }
 
   &__small-category {
     display: flex;
-    align-items: center;
+    gap: 0.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
   }
 }

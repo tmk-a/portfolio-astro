@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "../../style/colors.scss";
+@use "../../style/responsive.scss";
+$base-class: contact;
+
+// .contact
+
+.#{$base-class} {
+  padding: 1.5rem 0;
+  background-color: map.get($colors, background, main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+}

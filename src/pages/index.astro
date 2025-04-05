@@ -5,210 +5,35 @@ import AboutMe from "../feature/about/about-me.astro";
 import History from "../feature/history/history.astro";
 import Project from "../feature/project/project.astro";
 import Skills from '../feature/skills/skills.astro';
+import Contact from '../core/components/contact/contact.astro';
 ---
 
 <Body>
-    <main id="main" class="container">
-		<Home />
-		<AboutMe />
-		<Skills />
-		<!-- <section id="skills" class="skills">
-		  <ul class="skills__list">
-			<li class="skills__big-category">
-			  <h4>Frontend</h4>
-			  <ul class="skills__middle-categories">
-				<li>
-				  <h5>Languages</h5>
-				  <ul class="skills__small-category">
-					<li class="skills__item-container">
-					  <i class="fa-brands fa-html5"></i>
-					  <p class="skills__item-name">HTML</p>
-					</li>
-					<li class="skills__item-container">
-					  <i class="fa-brands fa-css3-alt"></i>
-					  <p class="skills__item-name">CSS</p>
-					</li>
-					<li class="skills__item-container">
-					  <i class="fa-brands fa-js"></i>
-					  <p class="skills__item-name">JS</p>
-					</li>
-				  </ul>
-				</li>
-				<li>
-				  <h5>Frameworks & Libraries</h5>
-				  <ul class="skills__small-category">
-					<li class="skills__item-container">
-					  <i class="fa-brands fa-react"></i>
-					  <p class="skills__item-name">React</p>
-					</li>
-					<li class="skills__item-container">
-					  <i class="fa-brands fa-vuejs"></i>
-					  <p class="skills__item-name">Vue.js</p>
-					</li>
-				  </ul>
-				</li>
-				<li>
-				  <h5>Tools</h5>
-				  <ul class="skills__others">
-					<li class="skills__others-item">
-					  <i class="fa-solid fa-pen-to-square"></i>
-					  <p>Responsive Design</p>
-					</li>
-					<li class="skills__others-item">
-					  <i class="fa-solid fa-pen-to-square"></i>
-					  <p>Dev Tools</p>
-					</li>
-					<li class="skills__others-item">
-					  <i class="fa-solid fa-pen-to-square"></i>
-					  <p>Debugging</p>
-					</li>
-				  </ul>
-				</li>
-			  </ul>
-			</li>
-			<li class="skills__big-category">
-			  <h4>Backend</h4>
-			  <ul class="skills__middle-categories">
-				<li>
-				  <h5>Languages</h5>
-				  <ul class="skills__small-category">
-					<li class="skills__item-container">
-					  <i class="fa-brands fa-java"></i>
-					  <p class="skills__item-name">Java</p>
-					</li>
-					<li class="skills__item-container">
-					  <i class="fa-brands fa-python"></i>
-					  <p class="skills__item-name">Python</p>
-					</li>
-				  </ul>
-				</li>
-				<li>
-				  <h5>Database</h5>
-				  <ul class="skills__small-category">
-					<li class="skills__item-container">
-					  <i class="fa-solid fa-database"></i>
-					  <p class="skills__item-name">MySQL</p>
-					</li>
-					<li class="skills__item-container">
-					  <i class="fa-solid fa-database"></i>
-					  <p class="skills__item-name">Postgres</p>
-					</li>
-				  </ul>
-				</li>
-				<li>
-				  <h5>Tools</h5>
-				  <ul class="skills__others">
-					<li class="skills__others-item">
-					  <i class="fa-solid fa-pen-to-square"></i>
-					  <p>Full Lifecycle Development</p>
-					</li>
-					<li class="skills__others-item">
-					  <i class="fa-solid fa-pen-to-square"></i>
-					  <p>J-Unit</p>
-					</li>
-				  </ul>
-				</li>
-			  </ul>
-			</li>
-			<li class="skills__big-category">
-			  <h4>Others</h4>
-			  <ul class="skills__middle-categories">
-				<li>
-				  <h5>Version Control</h5>
-				  <ul class="skills__small-category">
-					<li class="skills__item-container">
-					  <i class="fa-brands fa-git-alt"></i>
-					  <p class="skills__item-name">Git</p>
-					</li>
-					<li class="skills__item-container">
-					  <i class="fa-solid fa-arrows-spin"></i>
-					  <p class="skills__item-name">Agile</p>
-					</li>
-					<li class="skills__item-container">
-					  <i class="fa-solid fa-water"></i></i>
-					  <p class="skills__item-name">Waterfall</p>
-					</li>
-				  </ul>
-				</li>
-				<li>
-				  <h5>Automation & Scripting</h5>
-				  <ul class="skills__small-category">
-					<li class="skills__item-container">
-					  <i class="fa-solid fa-file-excel"></i>
-					  <p class="skills__item-name">VBA</p>
-					</li>
-					<li class="skills__item-container">
-					  <img
-						src="https://img.icons8.com/?size=100&id=39040&format=png&color=000000"
-						alt="powershell-icon"
-						class="skills__item-image"
-					  />
-					  <p class="skills__item-name">PowerShell</p>
-					</li>
-				  </ul>
-				</li>
-				<li>
-				  <h5>System Administration</h5>
-				  <ul class="skills__small-category">
-					<li class="skills__item-container">
-					  <image
-						src="https://img.icons8.com/?size=100&id=101116&format=png&color=000000"
-						alt="office365-icon"
-						class="skills__item-image"
-					  ></image>
-					  <p class="skills__item-name">Office 365</p>
-					</li>
-					<li class="skills__item-container">
-					  <i class="fa-solid fa-gears"></i>
-					  <p class="skills__item-name">Trouble<br />shooting</p>
-					</li>
-				  </ul>
-				</li>
-			  </ul>
-			</li>
-		  </ul>
-		</section> -->
-		<History />
-		<section class="certification">
-		  <h3 class="certification__title">Certification</h3>
-		  <ul class="certification__list">
-			<li>
-			  <h4 class="certification__name">JDLA Deep Learning for GENERAL</h4>
-			  <div class="certification__contents">
-				<p>2022/11</p>
-				<p>Japan Deep Learning Association</p>
-			  </div>
-			</li>
-			<li>
-			  <h4 class="certification__name">
-				Applied Information Technology Engineer Examination
-			  </h4>
-			  <div class="certification__contents">
-				<p>2022/6</p>
-				<p>IPA: Information-technology Promotion Agency,Japan</p>
-			  </div>
-			</li>
-		  </ul>
-		</section>
-		<Project />
-		<section id="contact" class="contact">
-		  <div class="contact__container">
-			<h2 class="contact__title">Let’s chat together!</h2>
-			<address class="contact__address">
-			  <a href="mailto:tamaki.akita.jp@example.com"
-				><i class="fa-solid fa-envelope"></i
-			  ></a>
-			  <a href="https://github.com/tmk-a" target="_blank"
-				><i class="fa-brands fa-github"></i
-			  ></a>
-			  <a href="https://www.linkedin.com/in/tamaki-akita/" target="_blank"
-				><i class="fa-brands fa-linkedin"></i
-			  ></a>
-			</address>
-			<a href="./docs/Tamaki Akita - Resume.pdf" target="_blank"
-				  >Resume<i class="fa-solid fa-arrow-up-right-from-square"></i
-			></a>
+	<Home />
+	<AboutMe />
+	<Skills />
+	<History />
+	<!-- <sectionclass="certification">
+	  <h3 class="certification__title">Certification</h3>
+	  <ul class="certification__list">
+		<li>
+		  <h4 class="certification__name">JDLA Deep Learning for GENERAL</h4>
+		  <div class="certification__contents">
+			<p>2022/11</p>
+			<p>Japan Deep Learning Association</p>
 		  </div>
-		</section>
-	  </main>
+		</li>
+		<li>
+		  <h4 class="certification__name">
+			Applied Information Technology Engineer Examination
+		  </h4>
+		  <div class="certification__contents">
+			<p>2022/6</p>
+			<p>IPA: Information-technology Promotion Agency,Japan</p>
+		  </div>
+		</li>
+	  </ul>
+	</sectionclass=> -->
+	<Project />
+	<Contact />
 </Body>

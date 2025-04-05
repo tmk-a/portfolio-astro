@@ -5,85 +5,86 @@ import SectionContainer from "../../core/components/section/section-container.as
 
 const skills = [
     {
-        category:"Languages",
-        items:[
-            {icon:"fa-brands fa-html5",skillName:"HTML"},
-            {icon:"fa-brands fa-css3-alt",skillName:"CSS"},
-            {icon:"fa-brands fa-js",skillName:"JS"},
-        ]
+      category:"Frontend",
+      subCategory:"Languages",
+      items:[
+          {icon:"fa-brands fa-html5",skillName:"HTML"},
+          {icon:"fa-brands fa-css3-alt",skillName:"CSS"},
+          {icon:"fa-brands fa-js",skillName:"JS"},
+      ],
+      subCategory2:"Frameworks & Libraries",
+      items2:[
+          {icon:"fa-brands fa-react",skillName:"React"},
+          {icon:"fa-brands fa-vuejs",skillName:"Vue.js"},
+          {icon:"fa-brands fa-js",skillName:"Astro"},
+      ]
     },
     {
-        category:"Languages",
-        items:[
-            {icon:"fa-brands fa-html5",skillName:"HTML"},
-            {icon:"fa-brands fa-css3-alt",skillName:"CSS"},
-            {icon:"fa-brands fa-js",skillName:"JS"},
-        ]
+      category:"Backend",
+      subCategory:"Languages",
+      items:[
+          {icon:"fa-brands fa-java",skillName:"Java"},
+          {icon:"fa-brands fa-python",skillName:"Python"},
+      ],
+      subCategory2:"Database & Tools",
+      items2:[
+          {icon:"fa-solid fa-database",skillName:"Postgres"},
+          {icon:"fa-solid fa-pen-to-square",skillName:"J-Unit"},
+      ]
     },
     {
-        category:"Languages",
-        items:[
-            {icon:"fa-brands fa-html5",skillName:"HTML"},
-            {icon:"fa-brands fa-css3-alt",skillName:"CSS"},
-            {icon:"fa-brands fa-js",skillName:"JS"},
-        ]
+      category:"Others",
+      subCategory:"Version Control",
+      items:[
+          {icon:"fa-brands fa-git-alt",skillName:"Git"},
+          {icon:"fa-solid fa-arrows-spin",skillName:"Agile"},
+          {icon:"fa-solid fa-water",skillName:"Waterfall"},
+      ],
+      subCategory2:"Automation & Scripting",
+      items2:[
+          {icon:"fa-solid fa-file-excel",skillName:"VBA"},
+          {icon:"fa-brands fa-vuejs",skillName:"PowerShell"},
+      ]
     }
-]
+  ]
 ---
 
-<SectionContainer className="swiper" title="Skills">
+<SectionContainer className="swiper" title="SKILL">
     <div class="swiper-wrapper">
-      <!-- <div class="swiper-slide"> -->
         {
-            skills.map( skill =>
-            (
+            skills.map( skill => ( 
                 <div class="swiper-slide">
                     <SkillCard 
-                        bigCategory=""
-                        middleCategory={skill.category}
-                        items={skill.items}
+                        contents={skill}
                     />
                 </div>
             ))
         }
-      {/* </div> */}
     </div>
-    <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
-  
-    <!-- If we need navigation buttons -->
-    <!-- <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div> -->
 </SectionContainer>
 <script>
-    // core version + navigation, pagination modules:
     import Swiper from "swiper";
     import { Navigation, Pagination } from "swiper/modules";
-    // import Swiper and modules styles
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/pagination";
     
-    // init Swiper:
     const swiper = new Swiper(".swiper", {
-      // configure Swiper to use modules
       modules: [Navigation, Pagination],
-      // Optional parameters
       loop: true,
       allowTouchMove: true,
       slidesPerGroup: 1,
-      slidesPerView: 1, 
+      slidesPerView: "auto", 
       spaceBetween: 20,
-      autoHeight: true,
+      autoHeight: false,
       grabCursor: true,
       breakpoints: {
         768: {
           slidesPerView: 2,
-          centeredSlides: false,
         },
         1280: {
           slidesPerView: 3,
-          centeredSlides: false,
         },
       },
 

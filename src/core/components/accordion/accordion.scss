@@ -9,7 +9,10 @@
 
   &__accordion {
     background-color: map.get($colors, background, darker);
-    color: map.get($colors, background, lighter);
+    color: map.get($colors, letter, main);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     padding: 1rem;
     width: 100%;
@@ -18,19 +21,13 @@
     text-align: left;
     font-size: 1rem;
     font-family: inherit;
-
-    border: 1px solid map.get($colors, border, variant);
     outline: none;
 
     transition: 0.4s;
 
     &:hover {
-      opacity: 0.7;
-    }
-
-    &.active,
-    .accordion:hover {
-      background-color: #ccc;
+      background-color: map.get($colors, background, accent-blue);
+      color: map.get($colors, letter, lightest);
     }
   }
 
@@ -40,9 +37,8 @@
 
   &__panel {
     padding: 0 18px;
-    background-color: map.get($colors, background, darker);
-    color: map.get($colors, background, lighter);
-    border: 1px solid map.get($colors, border, variant);
+    background-color: map.get($colors, background, accent-blue);
+    color: map.get($colors, letter, lightest);
     max-height: 0px;
     overflow: hidden;
     opacity: 0;
@@ -88,4 +84,9 @@
 .rotate {
   transform-origin: 50% 50%;
   transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.active {
+  background-color: map.get($colors, background, accent-blue);
+  color: map.get($colors, letter, lightest);
 }

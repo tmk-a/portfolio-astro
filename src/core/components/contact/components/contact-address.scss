@@ -1,0 +1,12 @@
+@use "../../../style/colors.scss" as *;
+@use "sass:map";
+
+.address {
+  display: flex;
+  gap: 3rem;
+  padding: 1rem;
+
+  &__item {
+    font-size: 2rem;
+  }
+}

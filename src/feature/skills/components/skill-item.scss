@@ -4,13 +4,9 @@ $base-class: skill-item;
 
 .#{$base-class} {
   &__container {
+    display: flex;
+    gap: 0.2rem;
     text-align: center;
-    font-size: 2rem;
-    min-width: 60px;
-
-    img {
-      width: 2rem;
-      height: 2rem;
-    }
+    align-items: center;
   }
 }

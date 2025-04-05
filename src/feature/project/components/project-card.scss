@@ -1,18 +1,16 @@
 @use "sass:map";
-// @use "../abstracts/font";
-// @use "../abstracts/screen-size";
-// @use "../abstracts/mixin";
 @use "../../../core/style/responsive.scss" as *;
 @use "../../../core/style/colors.scss" as *;
 
 $base-class: project-card;
 
-// .project
+// .project-card
 
 .#{$base-class} {
   padding: 4rem 0;
-  border: 2px solid map.get($colors, border, accent-green);
-  border-radius: 1rem;
+  // border: 1px solid map.get($colors, border, main);
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   &__name {
     padding: 0.2rem;

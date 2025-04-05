@@ -3,7 +3,6 @@
 @use "../../core/style/responsive.scss" as *;
 
 .history {
-  background-color: map.get($colors, background, main);
   &__container {
     display: flex;
     flex-direction: column;

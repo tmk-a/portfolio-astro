@@ -2,69 +2,38 @@
 import "./skill-card.scss";
 import Item from "./skill-item.astro";
 
-const {bigCategory,middleCategory,items = []} = Astro.props;
+const {contents} = Astro.props;
+const {category,subCategory,items,subCategory2,items2} = contents;
 ---
 
 <div class="skill-card">
-    <h4>{bigCategory}</h4>
-    <ul class="skill-card__middle-categories">
-      <li>
-        <h5>{middleCategory}</h5>
-        <div class="skill-card____small-category">
-        {
-            items.map( item =>
-            (
+  <h4>{category}</h4>
+  <ul class="skill-card__middle-categories">
+    <li>
+      <h5 class="skill-card__sub-category">{subCategory}</h5>
+      <div class="skill-card__small-category">
+      {
+        items.map((item)=>(
                 <Item
                     icon={item.icon}
-                    name={item.name}
+                    name={item.skillName}
                 />
-            ))
-        }
-        </div>
-        <!-- <ul class="skills__small-category">
-          <li class="skills__item-container">
-            <i class="fa-brands fa-html5"></i>
-            <p class="skills__item-name">HTML</p>
-          </li>
-          <li class="skills__item-container">
-            <i class="fa-brands fa-css3-alt"></i>
-            <p class="skills__item-name">CSS</p>
-          </li>
-          <li class="skills__item-container">
-            <i class="fa-brands fa-js"></i>
-            <p class="skills__item-name">JS</p>
-          </li>
-        </ul> -->
-      </li>
-      <!-- <li>
-        <h5>{middleCategories[1]}</h5>
-        <ul class="skills__small-category">
-          <li class="skills__item-container">
-            <i class="fa-brands fa-react"></i>
-            <p class="skills__item-name">React</p>
-          </li>
-          <li class="skills__item-container">
-            <i class="fa-brands fa-vuejs"></i>
-            <p class="skills__item-name">Vue.js</p>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <h5>{middleCategories[2]}</h5>
-        <ul class="skills__others">
-          <li class="skills__others-item">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <p>Responsive Design</p>
-          </li>
-          <li class="skills__others-item">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <p>Dev Tools</p>
-          </li>
-          <li class="skills__others-item">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <p>Debugging</p>
-          </li>
-        </ul>
-      </li> -->
-    </ul>
-  </div>
+        ))
+      }
+      </div>
+    </li>
+    <li>
+      <h5 class="skill-card__sub-category">{subCategory2}</h5>
+      <div class="skill-card__small-category">
+      {
+        items2.map((item)=>(
+                <Item
+                    icon={item.icon}
+                    name={item.skillName}
+                />
+        ))
+      }
+      </div>
+    </li>
+  </ul>
+</div>
