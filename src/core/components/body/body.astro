@@ -4,6 +4,7 @@ import Icon from "../../../assets/letter-t.png";
 import Nav from "../nav/nav.astro";
 import Footer from "../footer/footer.astro";
 import AllScriptFromCore from "../../all-core-scripts.astro";
+const {title} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -26,12 +27,14 @@ import AllScriptFromCore from "../../all-core-scripts.astro";
     />
     <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha384-..." crossorigin="anonymous"
-    />
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <AllScriptFromCore />
     <script src="https://unpkg.com/scrollreveal@4"></script>
-    <title>Portfolio</title>
+    <title>{title}</title>
   </head>
   <body>
     <Nav />
