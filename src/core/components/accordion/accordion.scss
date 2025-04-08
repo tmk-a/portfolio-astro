@@ -36,17 +36,19 @@
   }
 
   &__panel {
-    padding: 0 18px;
+    padding: 1rem 1rem 1rem 2rem;
     background-color: map.get($colors, background, accent-blue);
     color: map.get($colors, letter, lightest);
     max-height: 0px;
     overflow: hidden;
-    opacity: 0;
+    display: none;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    border-radius: 0.2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-    & p {
-      padding: 1rem;
-    }
+  &__panel-list {
+    list-style: square outside;
   }
 
   &__icon {
