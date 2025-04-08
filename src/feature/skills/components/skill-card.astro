@@ -10,10 +10,10 @@ const {category,subCategory,items,subCategory2,items2} = contents;
   <h4>{category}</h4>
   <ul class="skill-card__middle-categories">
     <li>
-      <h5 class="skill-card__sub-category">{subCategory}</h5>
+      <p class="skill-card__sub-category">{subCategory}</p>
       <div class="skill-card__small-category">
       {
-        items.map((item)=>(
+        items.map((item:any)=>(
                 <Item
                     icon={item.icon}
                     name={item.skillName}
@@ -23,10 +23,10 @@ const {category,subCategory,items,subCategory2,items2} = contents;
       </div>
     </li>
     <li>
-      <h5 class="skill-card__sub-category">{subCategory2}</h5>
+      <p class="skill-card__sub-category">{subCategory2}</p>
       <div class="skill-card__small-category">
       {
-        items2.map((item)=>(
+        items2.map((item:any)=>(
                 <Item
                     icon={item.icon}
                     name={item.skillName}

@@ -7,8 +7,6 @@ $base-class: skill-card;
 // .skill-card
 
 .#{$base-class} {
-  max-width: 17rem;
-
   &__middle-categories {
     background-color: map.get($colors, background, darker);
     border-radius: 0.2rem;
@@ -23,6 +21,7 @@ $base-class: skill-card;
   &__sub-category {
     margin-bottom: 1rem;
     text-align: center;
+    font-size: 0.8rem;
 
     &::before {
       content: "― ";

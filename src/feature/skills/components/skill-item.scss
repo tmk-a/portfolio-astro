@@ -9,4 +9,8 @@ $base-class: skill-item;
     text-align: center;
     align-items: center;
   }
+
+  &__name {
+    font-weight: 600;
+  }
 }
