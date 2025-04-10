@@ -1,21 +1,22 @@
 ---
 const { title, text } = Astro.props;
-import './accordion.scss';
+import "./accordion.scss";
 ---
+
 <div class="accordion__container">
   <button class="accordion__accordion">
     <h5 class="accordion__title">{title}</h5>
     <i class="fa-solid fa-plus accordion__accordion-plus accordion__icon"></i>
     <i class="fa-solid fa-minus accordion__accordion-minus accordion__icon"></i>
-    <i class="fa-solid fa-angle-down accordion__accordion-angle accordion__icon"></i>
+    <i class="fa-solid fa-angle-down accordion__accordion-angle accordion__icon"
+    ></i>
   </button>
   <ul class="accordion__panel">
     {
-      text.split('\n').map((line:string) => (
-        <li class="accordion__panel-list">
-          {line}
-        </li>
-      ))
+      text
+        .split("\n")
+        .map((line: string) => <li class="accordion__panel-list">{line}</li>)
     }
   </ul>
 </div>
+<script src="./accordion.js"></script>

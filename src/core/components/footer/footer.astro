@@ -1,36 +1,25 @@
 ---
 import "./footer.scss";
+
+const navList = [
+  { name: "HOME", navTo: "/" },
+  { name: "WORK", navTo: "/works" },
+  { name: "CONTACT", navTo: "#contact" },
+];
 ---
 
 <footer class="footer">
-    <div class="footer__container">
-      <nav class="footer__nav">
-        <ul class="footer__items">
-          <div class="footer__items">
+  <div class="footer__container">
+    <nav class="footer__nav">
+      <ul class="footer__items">
+        {
+          navList.map((item) => (
             <li>
-              <a href="#home">HOME</a>
+              <a href={item.navTo}>{item.name}</a>
             </li>
-            <li>
-              <a href="#about">ABOUT</a>
-            </li>
-          </div>
-          <div class="footer__items">
-            <li>
-              <a href="#skills">SKILLS</a>
-            </li>
-            <li>
-              <a href="#history">HISTORY</a>
-            </li>
-          </div>
-          <div class="footer__items">
-            <li>
-              <a href="#project">PROJECT</a>
-            </li>
-            <li>
-              <a href="#contact">CONTACT</a>
-            </li>
-          </div>
-        </ul>
-      </nav>
-    </div>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
 </footer>

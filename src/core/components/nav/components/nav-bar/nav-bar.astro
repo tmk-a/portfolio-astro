@@ -2,21 +2,20 @@
 import "./nav-bar.scss";
 
 const navList = [
-  {name:"HOME", navTo:"#home"},
-  {name:"ABOUT", navTo:"#about"},
-  {name:"SKILLS", navTo:"#skills"},
-  {name:"HISTORY", navTo:"#history"},
-  {name:"PROJECT", navTo:"#project"},
-  {name:"CONTACT", navTo:"#contact"}
+  { name: "HOME", navTo: "/" },
+  { name: "WORK", navTo: "/works" },
+  { name: "CONTACT", navTo: "#contact" },
 ];
 ---
 
 <nav class="nav-bar">
-    <ul class="nav-bar__list">
-      {
-        navList.map(item => (
-          <li><a href={item.navTo}>{item.name}</a></li>
-        ))
-      }
-    </ul>
-  </nav>
+  <ul class="nav-bar__list">
+    {
+      navList.map((item) => (
+        <li>
+          <a href={item.navTo}>{item.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

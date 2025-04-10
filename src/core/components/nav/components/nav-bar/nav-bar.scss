@@ -3,12 +3,10 @@
 @use "../../../../style/responsive.scss" as *;
 
 .nav-bar {
-  display: none;
-
-  @include responsive(sm) {
-    display: flex;
-    color: map.get($colors, letter, lighter);
-  }
+  display: flex;
+  color: map.get($colors, letter, lighter);
+  padding: 1rem 2rem 0.5rem 2rem;
+  justify-content: end;
 
   &__list {
     display: flex;
