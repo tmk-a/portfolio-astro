@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
           panel.style.display = "none";
         }, 300);
       } else {
-        panel.style.display = "block";
+        panel.style.display = "flex";
         setTimeout(() => {
           panel.style.maxHeight = panel.scrollHeight + "px";
           panel.style.opacity = "1";

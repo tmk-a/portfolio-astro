@@ -1,10 +1,13 @@
 ---
 import Body from "../core/components/body/body.astro";
-import Project from "../feature/project/project.astro";
+import AllProject from "../feature/project/all-project.astro";
 import Contact from "../core/components/contact/contact.astro";
+import Top from "../core/components/top/top.astro";
+import topImage from "../assets/works-top.jpg";
 ---
 
 <Body title="Works">
-  <Project />
+  <Top title="Works" img={topImage.src} alt="works-top-photo" />
+  <AllProject />
   <Contact />
 </Body>
