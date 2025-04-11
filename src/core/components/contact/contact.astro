@@ -2,11 +2,13 @@
 import SectionContainer from "../../components/section/section-container.astro";
 import Address from "./components/contact-address.astro";
 import Resume from "./components/contact-resume.astro";
+
+const { text } = Astro.props;
 ---
 
-<SectionContainer id="contact" title="Let’s chat together!">
-    <div class="contact">
-      <Address />
-      <Resume />
-    </div>
+<SectionContainer id="contact" title={text}>
+  <div class="contact">
+    <Address />
+    <Resume />
+  </div>
 </SectionContainer>

@@ -1,35 +1,35 @@
 ---
-import './history.scss';
-import Accordion from '../../core/components/accordion/accordion.astro';
-import SectionContainer from '../../core/components/section/section-container.astro';
+import "./history.scss";
+import Accordion from "../../core/components/accordion/accordion.astro";
+import SectionContainer from "../../core/components/section/section-container.astro";
 
 const accordionList = [
-    {
-        title:"STUDENT - WEB DEVELOPMENT",
-        text:"Expanding my skills as a Software Engineer"
-    },
-    {
-        title:"SYSTEM ENGINEER",
-        text:"Helped redesign a national health insurance system for 98,000+ members, from planning to launch and updates.\nBuilt new front-end features and test plans while leading a team of 5 engineers.\nCreated and maintained VBA tools for research projects, fixing bugs and improving speed.\nManaged project schedules, shared updates with stakeholders, and wrote clear technical docs."
-    },
-    {
-        title:"STUDENT - CREATIVE WRITING/JAPANESE LITERATURE",
-        text:"Studied Creative Writing and Japanese Literature.\nReceived a prize for a book review.\nRecognized as one of the top-performing students in my faculty in my third year."
-    },
-]
+  {
+    title: "STUDENT - WEB DEVELOPMENT",
+    text: "Expanding my skills as a Software Engineer",
+    link: "/works#myproject",
+  },
+  {
+    title: "SYSTEM ENGINEER",
+    text: "Helped redesign a national health insurance system for 98,000+ members, from planning to launch and updates.\nBuilt new front-end features and test plans while leading a team of 5 engineers.\nCreated and maintained VBA tools for research projects, fixing bugs and improving speed.\nManaged project schedules, shared updates with stakeholders, and wrote clear technical docs.",
+    link: "",
+  },
+  {
+    title: "STUDENT - CREATIVE WRITING/JAPANESE LITERATURE",
+    text: "Studied Creative Writing and Japanese Literature.\nReceived a prize for a book review.\nRecognized as one of the top-performing students in my faculty in my third year.",
+    link: "",
+  },
+];
 ---
+
 <SectionContainer className="history" title="HISTORY">
-    <div class='history__container'>
-        <div class="history__accordions">
-            {
-                accordionList.map(item => (
-                    <Accordion 
-                        title={item.title}
-                        text={item.text}
-                    />
-                ))
-            }
-        </div>
-        </div>
+  <div class="history__container">
+    <div class="history__accordions">
+      {
+        accordionList.map((item) => (
+          <Accordion title={item.title} text={item.text} link={item.link} />
+        ))
+      }
     </div>
+  </div>
 </SectionContainer>

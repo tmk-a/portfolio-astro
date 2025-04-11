@@ -1,0 +1,27 @@
+---
+import SectionContainer from "../../core/components/section/section-container.astro";
+import ProjectImg from "../../assets/portfolio.png";
+import ProjectCard from "./components/project-card.astro";
+
+const myProjects = [
+  {
+    name: "Portfolio",
+    photo: ProjectImg.src,
+    date: "2025/2",
+    link: "/",
+  },
+];
+---
+
+<SectionContainer id="myproject" title="PERSONAL PROJECT">
+  {
+    myProjects.map((pj) => (
+      <ProjectCard
+        name={pj.name}
+        photo={pj.photo}
+        date={pj.date}
+        link={pj.link}
+      />
+    ))
+  }
+</SectionContainer>

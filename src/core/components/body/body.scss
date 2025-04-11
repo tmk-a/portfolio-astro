@@ -23,12 +23,14 @@ a {
 
   &:hover {
     color: map.get($colors, background, accent-blue);
+    cursor: pointer;
   }
 }
 
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 li {

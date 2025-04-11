@@ -26,7 +26,7 @@
     transition: 0.4s;
 
     &:hover {
-      background-color: map.get($colors, background, accent-blue);
+      background-color: map.get($colors, background, accent-green);
       color: map.get($colors, letter, lightest);
     }
   }
@@ -37,11 +37,12 @@
 
   &__panel {
     padding: 1rem 1rem 1rem 2rem;
-    background-color: map.get($colors, background, accent-blue);
+    background-color: map.get($colors, background, accent-green);
     color: map.get($colors, letter, lightest);
     max-height: 0px;
     overflow: hidden;
     display: none;
+    flex-direction: column;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
     border-radius: 0.2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -49,6 +50,13 @@
 
   &__panel-list {
     list-style: square outside;
+  }
+
+  &__link {
+    text-align: end;
+    &:hover {
+      color: map.get($colors, link, lighter);
+    }
   }
 
   &__icon {
@@ -89,6 +97,6 @@
 }
 
 .active {
-  background-color: map.get($colors, background, accent-blue);
+  background-color: map.get($colors, background, accent-green);
   color: map.get($colors, letter, lightest);
 }

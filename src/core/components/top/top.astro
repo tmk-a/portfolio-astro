@@ -1,0 +1,12 @@
+---
+import "./top.scss";
+import SectionContainer from "../../components/section/section-container.astro";
+const { img, title, alt } = Astro.props;
+---
+
+<SectionContainer className="top">
+  <div class="top__wrap">
+    <img src={img} alt={alt} class="top__image" />
+    <h1 class="top__title">{title}</h1>
+  </div>
+</SectionContainer>

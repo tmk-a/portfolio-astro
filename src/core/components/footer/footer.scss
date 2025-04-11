@@ -8,11 +8,11 @@ $base-class: footer;
 .#{$base-class} {
   display: flex;
   flex-direction: column;
-
-  // background-color: map.get($colors, background, darker);
   background-image: url(../../../assets/image-footer.jpg);
   background-size: cover;
   background-position: center;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__container {
     display: flex;
